@@ -29,38 +29,199 @@
   </header>
 
   <main class="main">
-    <!-- Здесь может быть основной контент сайта -->
+    <!-- Слайдер секций -->
+    <div class="sections-slider" id="sectionsSlider">
+      <div class="sections-slider__track" id="sliderTrack">
+        <!-- Слайд 1: Подобрать ПК -->
+        <section class="slide slide--active" data-index="0">
+          <div class="slide__content hero-content">
+            <div class="hero-content__icon">🛠️</div>
+            <h1 class="hero-content__title">Индивидуальный подбор ПК</h1>
+            <p class="hero-content__desc">Мы учтём ваши задачи, бюджет и пожелания, чтобы собрать идеальный компьютер.</p>
+            <button class="hero-content__btn" id="openWizard">Подобрать ПК</button>
+          </div>
+        </section>
+
+        <!-- Слайд 2: Компьютеры в наличии -->
+        <section class="slide" data-index="1">
+          <div class="slide__content catalog-content">
+            <div class="catalog-content__icon">💻</div>
+            <h2 class="catalog-content__title">Компьютеры в наличии</h2>
+            <p class="catalog-content__desc">
+              Готовые сборки для игр, работы и творчества — от бюджетных до топовых. Выберите идеальный ПК прямо сейчас.
+            </p>
+            <a href="#" class="catalog-content__btn">Перейти в каталог</a>
+          </div>
+        </section>
+      </div>
+
+      <button class="sections-slider__arrow sections-slider__arrow--left" id="globalLeft" aria-label="Листать влево">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="sections-slider__arrow sections-slider__arrow--right" id="globalRight" aria-label="Листать вправо">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
   </main>
 
-  <!-- Всплывающий баннер -->
+  <!-- Модальное окно подбора ПК (wizard) -->
+  <div class="wizard-overlay" id="wizardOverlay">
+    <div class="wizard" id="wizard">
+      <button class="wizard__close" id="closeWizard" aria-label="Закрыть">&times;</button>
+      <div class="wizard__steps">
+        <div class="wizard__step-indicator">
+          <span class="wizard__step-dot active" data-step="1"></span>
+          <span class="wizard__step-dot" data-step="2"></span>
+          <span class="wizard__step-dot" data-step="3"></span>
+          <span class="wizard__step-dot" data-step="4"></span>
+        </div>
+        <div class="wizard__body">
+          <!-- Шаг 1: Бюджет -->
+          <div class="wizard__slide active" data-slide="1">
+            <h2 class="wizard__slide-title">Выберите бюджет</h2>
+            <div class="wizard__cards">
+              <label class="wizard__card" data-value="budget_low">
+                <input type="radio" name="budget" value="до 50 000 ₽">
+                <span class="wizard__card-icon">💰</span>
+                <span class="wizard__card-label">до 50 000 ₽</span>
+              </label>
+              <label class="wizard__card" data-value="budget_mid">
+                <input type="radio" name="budget" value="50 000 – 100 000 ₽">
+                <span class="wizard__card-icon">💵</span>
+                <span class="wizard__card-label">50 000 – 100 000 ₽</span>
+              </label>
+              <label class="wizard__card" data-value="budget_high">
+                <input type="radio" name="budget" value="100 000 – 150 000 ₽">
+                <span class="wizard__card-icon">💎</span>
+                <span class="wizard__card-label">100 000 – 150 000 ₽</span>
+              </label>
+              <label class="wizard__card" data-value="budget_ultra">
+                <input type="radio" name="budget" value="более 150 000 ₽">
+                <span class="wizard__card-icon">👑</span>
+                <span class="wizard__card-label">более 150 000 ₽</span>
+              </label>
+            </div>
+            <button class="wizard__btn wizard__btn--next" data-next="2">Далее</button>
+          </div>
+          <!-- Шаг 2: Цели -->
+          <div class="wizard__slide" data-slide="2">
+            <h2 class="wizard__slide-title">Для каких задач?</h2>
+            <div class="wizard__cards">
+              <label class="wizard__card" data-value="gaming">
+                <input type="radio" name="purpose" value="Игры">
+                <span class="wizard__card-icon">🎮</span>
+                <span class="wizard__card-label">Игры</span>
+              </label>
+              <label class="wizard__card" data-value="work">
+                <input type="radio" name="purpose" value="Работа / Учёба">
+                <span class="wizard__card-icon">💼</span>
+                <span class="wizard__card-label">Работа / Учёба</span>
+              </label>
+              <label class="wizard__card" data-value="universal">
+                <input type="radio" name="purpose" value="Универсальный">
+                <span class="wizard__card-icon">🔄</span>
+                <span class="wizard__card-label">Универсальный</span>
+              </label>
+            </div>
+            <button class="wizard__btn wizard__btn--next" data-next="3">Далее</button>
+          </div>
+          <!-- Шаг 3: Разрешение экрана -->
+          <div class="wizard__slide" data-slide="3">
+            <h2 class="wizard__slide-title">Разрешение монитора</h2>
+            <div class="wizard__cards">
+              <label class="wizard__card" data-value="1080p">
+                <input type="radio" name="resolution" value="Full HD (1920x1080)">
+                <span class="wizard__card-icon">🖥️</span>
+                <span class="wizard__card-label">Full HD</span>
+              </label>
+              <label class="wizard__card" data-value="1440p">
+                <input type="radio" name="resolution" value="2K (2560x1440)">
+                <span class="wizard__card-icon">🖥️</span>
+                <span class="wizard__card-label">2K (1440p)</span>
+              </label>
+              <label class="wizard__card" data-value="2160p">
+                <input type="radio" name="resolution" value="4K (3840x2160)">
+                <span class="wizard__card-icon">🖥️</span>
+                <span class="wizard__card-label">4K (2160p)</span>
+              </label>
+            </div>
+            <button class="wizard__btn wizard__btn--next" data-next="4">Далее</button>
+          </div>
+          <!-- Шаг 4: Способ связи -->
+          <div class="wizard__slide" data-slide="4">
+            <h2 class="wizard__slide-title">Как с вами связаться?</h2>
+            <div class="wizard__cards">
+              <label class="wizard__card" data-value="telegram">
+                <input type="radio" name="contact" value="Telegram">
+                <span class="wizard__card-icon">✈️</span>
+                <span class="wizard__card-label">Telegram</span>
+              </label>
+              <label class="wizard__card" data-value="vk">
+                <input type="radio" name="contact" value="ВК">
+                <span class="wizard__card-icon">🔵</span>
+                <span class="wizard__card-label">ВК</span>
+              </label>
+              <label class="wizard__card" data-value="call">
+                <input type="radio" name="contact" value="Звонок">
+                <span class="wizard__card-icon">📞</span>
+                <span class="wizard__card-label">Звонок</span>
+              </label>
+            </div>
+            <div class="wizard__contact-fields">
+              <div class="wizard__contact-field" id="fieldTelegram" style="display: none;">
+                <label class="wizard__field-label">Ваш ник в Telegram</label>
+                <input type="text" class="wizard__input" placeholder="@username" id="telegramUsername">
+              </div>
+              <div class="wizard__contact-field" id="fieldVK" style="display: none;">
+                <label class="wizard__field-label">Ссылка на профиль ВК</label>
+                <input type="text" class="wizard__input" placeholder="https://vk.com/..." id="vkLink">
+              </div>
+              <div class="wizard__contact-field" id="fieldCall" style="display: none;">
+                <label class="wizard__field-label">Номер телефона</label>
+                <input type="tel" class="wizard__input" placeholder="+7 (900) 000-00-00" id="phoneNumber">
+              </div>
+            </div>
+            <button class="wizard__btn wizard__btn--submit" id="submitWizard">Отправить заявку</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Всплывающий баннер (popup) -->
   <aside class="popup-banner" id="popupBanner" aria-label="Форма обратной связи">
     <button class="popup-banner__close" id="closePopup" aria-label="Закрыть форму">&times;</button>
     <div class="popup-banner__content">
-      <h2 class="popup-banner__title">Нужна помощь в выборе компьютера?</h2>
-      <p class="popup-banner__text">
-        Наши специалисты с радостью помогут подобрать идеальный компьютер, исходя из ваших потребностей и бюджета.
-      </p>
-      <p class="popup-banner__subtext">
-        Просто заполните эту форму, и мы свяжемся с вами в ближайшее время.
-      </p>
-      <form class="popup-banner__form" id="helpForm" novalidate>
-        <div class="popup-banner__input-group">
-          <input type="text" id="userName" class="popup-banner__input" placeholder="Ваше имя" required autocomplete="name">
-        </div>
-        <div class="popup-banner__input-group">
-          <input type="tel" id="userPhone" class="popup-banner__input" placeholder="Номер телефона" required autocomplete="tel">
-        </div>
-        <div class="popup-banner__agreement">
-          <label class="popup-banner__checkbox-label">
-            <input type="checkbox" id="agreeCheckbox" required>
-            <span class="popup-banner__checkbox-text">
-              Нажимая на кнопку, вы соглашаетесь с нашей
-              <a href="#" class="popup-banner__link">политикой конфиденциальности</a>
-            </span>
-          </label>
-        </div>
-        <button type="submit" class="popup-banner__submit-btn">Отправить</button>
-      </form>
+      <div class="popup-banner__form-wrapper" id="formWrapper">
+        <h2 class="popup-banner__title">Нужна помощь в выборе компьютера?</h2>
+        <p class="popup-banner__text">Наши специалисты с радостью помогут подобрать идеальный компьютер, исходя из ваших потребностей и бюджета.</p>
+        <p class="popup-banner__subtext">Просто заполните эту форму, и мы свяжемся с вами в ближайшее время.</p>
+        <form class="popup-banner__form" id="helpForm" novalidate>
+          <div class="popup-banner__input-group">
+            <input type="text" id="userName" class="popup-banner__input" placeholder="Ваше имя" required autocomplete="name">
+          </div>
+          <div class="popup-banner__input-group">
+            <input type="tel" id="userPhone" class="popup-banner__input" placeholder="Номер телефона" required autocomplete="tel">
+          </div>
+          <div class="popup-banner__agreement">
+            <label class="popup-banner__checkbox-label">
+              <input type="checkbox" id="agreeCheckbox" required>
+              <span class="popup-banner__checkbox-text">
+                Нажимая на кнопку, вы соглашаетесь с нашей
+                <a href="#" class="popup-banner__link">политикой конфиденциальности</a>
+              </span>
+            </label>
+          </div>
+          <button type="submit" class="popup-banner__submit-btn">Отправить</button>
+        </form>
+      </div>
+      <div class="popup-banner__success" id="successBlock">
+        <svg class="popup-banner__checkmark" width="80" height="80" viewBox="0 0 80 80">
+          <circle class="popup-banner__circle" cx="40" cy="40" r="36" fill="none" stroke="#ff3333" stroke-width="4" stroke-dasharray="226" stroke-dashoffset="226"></circle>
+          <polyline class="popup-banner__check" points="25,40 36,52 55,28" fill="none" stroke="#ff3333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50"></polyline>
+        </svg>
+        <p class="popup-banner__success-text">Заявка принята!<br>Мы свяжемся с вами в ближайшее время.</p>
+      </div>
     </div>
   </aside>
 
