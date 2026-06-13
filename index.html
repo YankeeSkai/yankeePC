@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YANKEE PC — сборки ПК</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo-link" aria-label="На главную">
+        <img src="logo.png" alt="YANKEE PC" class="header__logo">
+      </a>
+      <nav class="header__nav" id="mainNav" aria-label="Основное меню">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Почему дешевле</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Гарантия</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="header__burger" id="burgerBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Открыть меню">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Здесь может быть основной контент сайта -->
+  </main>
+
+  <!-- Всплывающий баннер -->
+  <aside class="popup-banner" id="popupBanner" aria-label="Форма обратной связи">
+    <button class="popup-banner__close" id="closePopup" aria-label="Закрыть форму">&times;</button>
+    <div class="popup-banner__content">
+      <h2 class="popup-banner__title">Нужна помощь в выборе компьютера?</h2>
+      <p class="popup-banner__text">
+        Наши специалисты с радостью помогут подобрать идеальный компьютер, исходя из ваших потребностей и бюджета.
+      </p>
+      <p class="popup-banner__subtext">
+        Просто заполните эту форму, и мы свяжемся с вами в ближайшее время.
+      </p>
+      <form class="popup-banner__form" id="helpForm" novalidate>
+        <div class="popup-banner__input-group">
+          <input type="text" id="userName" class="popup-banner__input" placeholder="Ваше имя" required autocomplete="name">
+        </div>
+        <div class="popup-banner__input-group">
+          <input type="tel" id="userPhone" class="popup-banner__input" placeholder="Номер телефона" required autocomplete="tel">
+        </div>
+        <div class="popup-banner__agreement">
+          <label class="popup-banner__checkbox-label">
+            <input type="checkbox" id="agreeCheckbox" required>
+            <span class="popup-banner__checkbox-text">
+              Нажимая на кнопку, вы соглашаетесь с нашей
+              <a href="#" class="popup-banner__link">политикой конфиденциальности</a>
+            </span>
+          </label>
+        </div>
+        <button type="submit" class="popup-banner__submit-btn">Отправить</button>
+      </form>
+    </div>
+  </aside>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
