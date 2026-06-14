@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YANKEE PC — FAQ</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo-link" aria-label="На главную">
+        <img src="logo.png" alt="YANKEE PC" class="header__logo">
+      </a>
+      <nav class="header__nav" id="mainNav" aria-label="Основное меню">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="index.html" class="header__nav-link">Каталог</a></li>
+          <li class="header__nav-item"><a href="index.html" class="header__nav-link">Почему дешевле</a></li>
+          <li class="header__nav-item"><a href="index.html" class="header__nav-link">Гарантия</a></li>
+          <li class="header__nav-item"><a href="faq.html" class="header__nav-link header__nav-link--active">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="header__burger" id="burgerBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Открыть меню">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="faq-page">
+      <div class="faq-page__header">
+        <div class="faq-page__image">
+          <img src="pc1.png" alt="Компьютер">
+        </div>
+        <h1 class="faq-page__title">Часто задаваемые вопросы</h1>
+      </div>
+
+      <div class="faq-list">
+        <!-- ... элементы faq-item без изменений ... -->
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Сколько стоит сборка?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            Сборка абсолютно бесплатна при покупке комплектующих у нас. Вы платите только за железо.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Как долго длится сборка?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            Обычно 1–2 дня после поступления всех комплектующих на склад. В редких случаях — до 3 дней.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Какая гарантия на компьютеры?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            Мы предоставляем полную гарантию 3 года на все комплектующие и сборку. Бесплатный ремонт или замена.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Можно ли вернуть или обменять компьютер?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            Да, в течение 14 дней после покупки вы можете вернуть или обменять компьютер при сохранении товарного вида.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Есть ли доставка по России?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            Доставка осуществляется по всей России. Стоимость рассчитывается при оформлении заказа и зависит от региона.
+          </div>
+        </div>
+      </div>
+
+      <!-- Форма "Задать вопрос" -->
+      <section class="faq-ask" id="faqAskSection">
+        <h2 class="faq-ask__title">Не нашли ответа? Задайте свой вопрос!</h2>
+        <p class="faq-ask__subtitle">Оставьте контакты, и мы подробно ответим вам в ближайшее время.</p>
+        <form class="faq-ask__form" id="faqAskForm" novalidate>
+          <!-- ... поля без изменений ... -->
+          <div class="faq-ask__field">
+            <label class="faq-ask__label" for="faqName">Ваше имя</label>
+            <input type="text" id="faqName" class="faq-ask__input" placeholder="Иван" required autocomplete="name">
+          </div>
+          <div class="faq-ask__field">
+            <label class="faq-ask__label">Способ связи</label>
+            <div class="faq-ask__contact-options">
+              <label class="faq-ask__radio">
+                <input type="radio" name="faqContactType" value="phone" checked>
+                <span>Телефон</span>
+              </label>
+              <label class="faq-ask__radio">
+                <input type="radio" name="faqContactType" value="telegram">
+                <span>Telegram</span>
+              </label>
+              <label class="faq-ask__radio">
+                <input type="radio" name="faqContactType" value="vk">
+                <span>ВК</span>
+              </label>
+            </div>
+          </div>
+          <div class="faq-ask__field" id="faqPhoneField">
+            <label class="faq-ask__label" for="faqPhone">Номер телефона</label>
+            <div class="wizard__phone-wrapper">
+              <svg class="wizard__flag-svg" width="24" height="18" viewBox="0 0 24 18">
+                <rect width="24" height="6" fill="#fff"/>
+                <rect y="6" width="24" height="6" fill="#0039a6"/>
+                <rect y="12" width="24" height="6" fill="#d52b1e"/>
+              </svg>
+              <input type="tel" id="faqPhone" class="faq-ask__input" placeholder="(900) 000-00-00" autocomplete="tel">
+            </div>
+          </div>
+          <div class="faq-ask__field" id="faqTelegramField" style="display: none;">
+            <label class="faq-ask__label" for="faqTelegram">Ваш ник в Telegram</label>
+            <input type="text" id="faqTelegram" class="faq-ask__input" placeholder="@username">
+          </div>
+          <div class="faq-ask__field" id="faqVkField" style="display: none;">
+            <label class="faq-ask__label" for="faqVk">Ссылка на профиль ВК</label>
+            <input type="text" id="faqVk" class="faq-ask__input" placeholder="https://vk.com/...">
+          </div>
+          <div class="faq-ask__field">
+            <label class="faq-ask__label" for="faqQuestion">Ваш вопрос</label>
+            <textarea id="faqQuestion" class="faq-ask__textarea" rows="3" placeholder="Опишите, что вас интересует..." required></textarea>
+          </div>
+          <button type="submit" class="faq-ask__btn">Отправить вопрос</button>
+        </form>
+        <!-- Блок успешной отправки (изначально скрыт) -->
+        <div class="faq-ask__success" id="faqSuccess">
+          <svg class="faq-ask__checkmark" width="80" height="80" viewBox="0 0 80 80">
+            <circle class="faq-ask__circle" cx="40" cy="40" r="36" fill="none" stroke="#8655e9" stroke-width="4" stroke-dasharray="226" stroke-dashoffset="226"></circle>
+            <polyline class="faq-ask__check" points="25,40 36,52 55,28" fill="none" stroke="#8655e9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50"></polyline>
+          </svg>
+          <p>Ваш вопрос отправлен!<br>Мы ответим в ближайшее время.</p>
+        </div>
+      </section>
+
+      <a href="index.html" class="faq-back">← На главную</a>
+    </div>
+  </main>
+
+  <script src="faq.js"></script>
+</body>
+</html>
