@@ -15,8 +15,8 @@
       <nav class="header__nav" id="mainNav" aria-label="Основное меню">
         <ul class="header__nav-list">
           <li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Почему дешевле</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Гарантия</a></li>
+          <li class="header__nav-item"><a href="why.html" class="header__nav-link">Почему дешевле</a></li>
+          <li class="header__nav-item"><a href="garant.html" class="header__nav-link">Гарантия</a></li>
           <li class="header__nav-item"><a href="faq.html" class="header__nav-link">FAQ</a></li>
         </ul>
       </nav>
@@ -90,13 +90,12 @@
             </div>
             <button class="wizard__btn wizard__btn--next" data-next="2">Далее</button>
           </div>
-          <!-- Шаг 2: Цели -->
+          <!-- Шаг 2: Цели (удалён Универсальный) -->
           <div class="wizard__slide" data-slide="2">
             <h2 class="wizard__slide-title">Для каких задач?</h2>
             <div class="wizard__cards">
               <label class="wizard__card" data-value="gaming"><input type="radio" name="purpose" value="Игры"><span class="wizard__card-icon">🎮</span><span class="wizard__card-label">Игры</span></label>
               <label class="wizard__card" data-value="work"><input type="radio" name="purpose" value="Работа / Учёба"><span class="wizard__card-icon">💼</span><span class="wizard__card-label">Работа / Учёба</span></label>
-              <label class="wizard__card" data-value="universal"><input type="radio" name="purpose" value="Универсальный"><span class="wizard__card-icon">🔄</span><span class="wizard__card-label">Универсальный</span></label>
             </div>
             <button class="wizard__btn wizard__btn--next" data-next="3">Далее</button>
           </div>
@@ -145,43 +144,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Всплывающий баннер (popup) -->
-  <aside class="popup-banner" id="popupBanner" aria-label="Форма обратной связи">
-    <button class="popup-banner__close" id="closePopup" aria-label="Закрыть форму">&times;</button>
-    <div class="popup-banner__content">
-      <div class="popup-banner__form-wrapper" id="formWrapper">
-        <h2 class="popup-banner__title">Нужна помощь в выборе компьютера?</h2>
-        <p class="popup-banner__text">Наши специалисты с радостью помогут подобрать идеальный компьютер, исходя из ваших потребностей и бюджета.</p>
-        <p class="popup-banner__subtext">Просто заполните эту форму, и мы свяжемся с вами в ближайшее время.</p>
-        <form class="popup-banner__form" id="helpForm" novalidate>
-          <div class="popup-banner__input-group">
-            <input type="text" id="userName" class="popup-banner__input" placeholder="Ваше имя" required autocomplete="name">
-          </div>
-          <div class="popup-banner__input-group">
-            <input type="tel" id="userPhone" class="popup-banner__input" placeholder="Номер телефона" required autocomplete="tel">
-          </div>
-          <div class="popup-banner__agreement">
-            <label class="popup-banner__checkbox-label">
-              <input type="checkbox" id="agreeCheckbox" required>
-              <span class="popup-banner__checkbox-text">
-                Нажимая на кнопку, вы соглашаетесь с нашей
-                <a href="#" class="popup-banner__link">политикой конфиденциальности</a>
-              </span>
-            </label>
-          </div>
-          <button type="submit" class="popup-banner__submit-btn">Отправить</button>
-        </form>
-      </div>
-      <div class="popup-banner__success" id="successBlock">
-        <svg class="popup-banner__checkmark" width="80" height="80" viewBox="0 0 80 80">
-          <circle class="popup-banner__circle" cx="40" cy="40" r="36" fill="none" stroke="#8655e9" stroke-width="4" stroke-dasharray="226" stroke-dashoffset="226"></circle>
-          <polyline class="popup-banner__check" points="25,40 36,52 55,28" fill="none" stroke="#8655e9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50"></polyline>
-        </svg>
-        <p class="popup-banner__success-text">Заявка принята!<br>Мы свяжемся с вами в ближайшее время.</p>
-      </div>
-    </div>
-  </aside>
 
   <script src="script.js"></script>
 </body>

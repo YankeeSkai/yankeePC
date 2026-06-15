@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YANKEE PC — Гарантия</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="garant.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo-link" aria-label="На главную">
+        <img src="logo.png" alt="YANKEE PC" class="header__logo">
+      </a>
+      <nav class="header__nav" id="mainNav" aria-label="Основное меню">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a></li>
+          <li class="header__nav-item"><a href="why.html" class="header__nav-link">Почему дешевле</a></li>
+          <li class="header__nav-item"><a href="garant.html" class="header__nav-link header__nav-link--active">Гарантия</a></li>
+          <li class="header__nav-item"><a href="faq.html" class="header__nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="header__burger" id="burgerBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Открыть меню">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="garant-page">
+    <!-- Герой -->
+    <div class="garant-hero">
+      <div class="garant-hero__content">
+        <h1 class="garant-hero__title">Гарантия <span class="accent">на вашу сторону</span></h1>
+        <p class="garant-hero__desc">
+          Мы отвечаем за каждый собранный ПК. Вся техника – оригинальная, с официальными гарантийными сроками. <br>
+          Ваши права защищены законом РФ.
+        </p>
+      </div>
+      <div class="garant-hero__image">
+        <img src="pc1.png" alt="Гарантия" onerror="this.src='https://placehold.co/300x300?text=🔒'">
+      </div>
+    </div>
+
+    <!-- Сетка гарантийных обязательств -->
+    <div class="garant-grid">
+      <div class="garant-card">
+        <div class="garant-card__icon">🛡️</div>
+        <h3 class="garant-card__title">Собственная гарантия YANKEE PC</h3>
+        <p class="garant-card__text">
+          Дополнительная гарантия от нашего сервисного центра – 12 месяцев на сборку и совместимость. <br>
+          При поломке по нашей вине – бесплатный ремонт или замена.
+        </p>
+      </div>
+      <div class="garant-card">
+        <div class="garant-card__icon">⚙️</div>
+        <h3 class="garant-card__title">Гарантия производителей</h3>
+        <p class="garant-card__text">
+          Все комплектующие имеют официальную гарантию от 12 до 36 месяцев (в зависимости от бренда). <br>
+          Оригинальные коробки и документы сохраняются.
+        </p>
+      </div>
+      <div class="garant-card">
+        <div class="garant-card__icon">🔄</div>
+        <h3 class="garant-card__title">Обмен и возврат</h3>
+        <p class="garant-card__text">
+          По ЗоЗПП РФ: возврат товара надлежащего качества в течение 7 дней, ненадлежащего – в течение гарантийного срока. <br>
+          Подробности – в блоке ниже.
+        </p>
+      </div>
+      <div class="garant-card">
+        <div class="garant-card__icon">💡</div>
+        <h3 class="garant-card__title">Техподдержка 24/7</h3>
+        <p class="garant-card__text">
+          Консультации по настройке, диагностика удалённо, помощь в активации гарантийных случаев. <br>
+          Связь через Telegram, ВК или звонок.
+        </p>
+      </div>
+    </div>
+
+    <!-- Сроки гарантии на компоненты -->
+    <div class="garant-terms">
+      <h2 class="garant-section-title">Сроки гарантии на оборудование</h2>
+      <div class="garant-table">
+        <div class="garant-row garant-row--header">
+          <div>Комплектующее</div>
+          <div>Гарантийный срок</div>
+          <div>Примечание</div>
+        </div>
+        <div class="garant-row"><div>Процессор</div><div>36 мес.</div><div>Intel / AMD</div></div>
+        <div class="garant-row"><div>Материнская плата</div><div>36 мес.</div><div>ASUS, MSI, Gigabyte и др.</div></div>
+        <div class="garant-row"><div>Видеокарта</div><div>24–36 мес.</div><div>Зависит от модели</div></div>
+        <div class="garant-row"><div>Оперативная память</div><div>Пожизненная*</div><div>*от некоторых брендов, уточняйте</div></div>
+        <div class="garant-row"><div>Накопители SSD</div><div>36–60 мес.</div><div>Samsung, WD, Kingston</div></div>
+        <div class="garant-row"><div>Блок питания</div><div>60 мес.</div><div>Топовые серии – до 10 лет</div></div>
+        <div class="garant-row"><div>Охлаждение (СЖО)</div><div>12–36 мес.</div><div>Зависит от модели</div></div>
+        <div class="garant-row"><div>Корпус</div><div>12 мес.</div><div>Заводской брак</div></div>
+      </div>
+      <p class="garant-note">*Пожизненная гарантия означает весь срок службы изделия, но не менее 10 лет.</p>
+    </div>
+
+    <!-- Как вернуть или обменять товар (пошагово) -->
+    <div class="garant-steps">
+      <h2 class="garant-section-title">Процедура возврата / обмена</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step__number">01</div>
+          <h4 class="step__title">Свяжитесь с нами</h4>
+          <p>По телефону, в Telegram или через форму на сайте. Опишите проблему.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <h4 class="step__title">Предоставьте документы</h4>
+          <p>Чек, гарантийный талон, фото/видео неисправности (при необходимости).</p>
+        </div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <h4 class="step__title">Диагностика</h4>
+          <p>Мы проведём проверку (в нашем сервисе или авторизованном центре).</p>
+        </div>
+        <div class="step">
+          <div class="step__number">04</div>
+          <h4 class="step__title">Ремонт / замена / возврат</h4>
+          <p>По закону РФ – в течение 45 дней. В большинстве случаев решаем за 5–14 дней.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Контакты гарантийного отдела -->
+    <div class="garant-contacts">
+      <h2 class="garant-section-title">Гарантийный отдел</h2>
+      <div class="contacts-wrapper">
+        <div class="contact-item">
+          <div class="contact-item__icon">📞</div>
+          <div class="contact-item__info">
+            <strong>Телефон</strong>
+            <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+            <span>Бесплатно по РФ</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">✈️</div>
+          <div class="contact-item__info">
+            <strong>Telegram</strong>
+            <a href="#">@yankee_garant_bot</a>
+            <span>Отвечаем 24/7</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">📧</div>
+          <div class="contact-item__info">
+            <strong>Email</strong>
+            <a href="mailto:garant@yankeepc.ru">garant@yankeepc.ru</a>
+            <span>Ответ в течение 2 часов</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">⏰</div>
+          <div class="contact-item__info">
+            <strong>Часы работы сервиса</strong>
+            <span>Пн–Пт: 10:00 – 20:00, Сб: 11:00 – 16:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Юридическая справка -->
+    <div class="garant-law">
+      <div class="law-content">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <p>
+          Наша деятельность регулируется <strong>Законом РФ «О защите прав потребителей»</strong> (статьи 18–22). 
+          Вы имеете право на обмен/возврат товара надлежащего качества в течение 7 дней, ненадлежащего – в течение всего гарантийного срока. 
+          При отказе от добровольного удовлетворения требований – мы несём административную ответственность.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

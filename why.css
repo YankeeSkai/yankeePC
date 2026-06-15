@@ -1,0 +1,192 @@
+/* ===== СТРАНИЦА "ПОЧЕМУ ДЕШЕВЛЕ" (NEO CYBER EDITION) ===== */
+.why-page {
+  max-width: 1000px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  color: var(--color-text);
+}
+
+/* Вступление */
+.why-intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.why-intro__text {
+  flex: 1 1 300px;
+}
+
+.why-intro__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--gradient-cyan-purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.why-intro__desc {
+  font-size: 1.15rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.why-intro__image {
+  flex: 0 0 250px;
+  max-width: 250px;
+}
+
+.why-intro__image img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.5));
+  transition: filter 0.3s ease;
+}
+.why-intro__image img:hover {
+  filter: drop-shadow(0 0 30px var(--color-cyan));
+}
+
+/* Сетка преимуществ */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.why-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.why-card:hover {
+  border-color: var(--color-cyan);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 240, 255, 0.25), 0 0 0 1px rgba(0, 240, 255, 0.2);
+}
+
+.why-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 4px var(--color-cyan));
+}
+
+.why-card__title {
+  font-size: 1.4rem;
+  background: var(--gradient-cyan-purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.why-card__text {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+/* Заключительный блок */
+.why-conclusion {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: var(--color-surface);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 24px;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+  transition: box-shadow 0.3s;
+}
+.why-conclusion:hover {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+.why-conclusion__image {
+  flex: 0 0 200px;
+  max-width: 200px;
+}
+
+.why-conclusion__image img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(160, 32, 240, 0.5));
+  transition: filter 0.3s;
+}
+.why-conclusion__image img:hover {
+  filter: drop-shadow(0 0 25px var(--color-purple));
+}
+
+.why-conclusion__text {
+  flex: 1 1 300px;
+}
+
+.why-conclusion__text h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: var(--gradient-cyan-purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.why-conclusion__text p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.why-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 60px;
+  background: var(--gradient-cyan-purple);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  box-shadow: 0 0 6px var(--color-cyan);
+}
+
+.why-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px var(--color-cyan);
+  background: var(--gradient-purple-cyan);
+}
+
+/* Адаптивность */
+@media (max-width: 700px) {
+  .why-intro__title {
+    font-size: 2rem;
+  }
+  .why-intro__image {
+    max-width: 180px;
+    flex: 0 0 180px;
+  }
+  .why-conclusion__text h2 {
+    font-size: 1.5rem;
+  }
+  .why-card {
+    padding: 1.5rem 1rem;
+  }
+}
